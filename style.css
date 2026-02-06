@@ -137,3 +137,9 @@ footer {
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(79,70,229,0.3);
 }
+
+.sub-heading {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  color: #4f46e5;
+}
