@@ -95,3 +95,11 @@ footer {
   text-align: center;
   padding: 30px 10px;
 }
+.section.light {
+  background: #f8fafc;
+  color: #111827;
+}
+
+.section.light h2 {
+  color: #4f46e5;
+}
