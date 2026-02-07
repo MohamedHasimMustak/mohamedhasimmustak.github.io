@@ -169,3 +169,17 @@ footer {
     background-position: 300% center;
   }
 }
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a8a; /* deep professional blue */
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #475569; /* soft gray-blue */
+  line-height: 1.6;
+}
