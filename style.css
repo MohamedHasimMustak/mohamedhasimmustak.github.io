@@ -183,3 +183,12 @@ footer {
   color: #475569; /* soft gray-blue */
   line-height: 1.6;
 }
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
