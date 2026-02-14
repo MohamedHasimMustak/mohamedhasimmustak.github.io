@@ -300,9 +300,18 @@ footer {
 
 /* ---------- Links Section ---------- */
 .links-section {
-  background: #eef2ff;
-  padding: 70px 20px;
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 50px 30px;
   text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 24px;
 }
 
 .links-section h2 {
