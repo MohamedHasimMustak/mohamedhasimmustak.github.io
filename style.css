@@ -16,16 +16,8 @@ body {
 /* ---------- MAIN WRAPPER ---------- */
 .section {
   max-width: 1000px;
-  margin: 60px auto;
-  padding: 60px 40px;
-
-  background: rgba(17, 24, 39, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-
+  margin: 80px auto;
+  padding: 40px 20px;
   text-align: center;
 }
 
