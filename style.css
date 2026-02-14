@@ -112,29 +112,32 @@ body {
   100% { background-position: 300% center; }
 }
 
-/* ================= MINIMAL TRANSPARENT BUTTONS ================= */
+/* ================= MODERN MINIMAL BUTTONS ================= */
 .btn,
 .link-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 
   padding: 10px 22px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
 
-  background: rgba(255,255,255,0.10);   /* same vibe as skills */
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.28);
 
   color: #e5e7eb;
 
   transition: all 0.25s ease;
 }
 
+/* Hover */
 .btn:hover,
 .link-btn:hover {
   background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.45);
   transform: translateY(-3px);
 }
 
