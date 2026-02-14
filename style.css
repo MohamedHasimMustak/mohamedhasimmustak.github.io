@@ -23,13 +23,14 @@ body {
 
 /* ================= GLASS WIDGET (USED SELECTIVELY) ================= */
 .glass {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  background: rgba(255, 255, 255, 0.05); /* VERY LIGHT */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border-radius: 30px;
   padding: 60px 30px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* softer */
 }
 
 /* ================= HERO ================= */
@@ -39,12 +40,15 @@ body {
   padding: 80px 30px;
   text-align: center;
 
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  background: rgba(255, 255, 255, 0.06); /* lighter */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border-radius: 30px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* softer shadow */
 }
+
 
 /* ================= GOLD MAIN HEADINGS ================= */
 .section h2 {
@@ -596,9 +600,25 @@ footer {
 }
 
 .links-section h2 {
+  display: inline-block;
   font-size: 2rem;
-  margin-bottom: 25px;
-  color: #1e1b4b;
+  margin-bottom: 40px;
+
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff3a0,
+    #ffd700,
+    #b8860b
+  );
+
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: goldShine 4s linear infinite;
+}
 }
 
 .links-container {
