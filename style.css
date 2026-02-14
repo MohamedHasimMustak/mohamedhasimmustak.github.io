@@ -1,4 +1,4 @@
-/* ---------- Global Reset ---------- */
+/* ---------- GLOBAL RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,111 +6,149 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* ---------- FIXED BACKGROUND ---------- */
 body {
-  background: #f5f7fb;
-  color: #222;
+  background: url("background.jpg") center/cover fixed no-repeat;
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
-/* ---------- Hero Section ---------- */
+/* ---------- MAIN WRAPPER ---------- */
+.section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 40px;
+
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+
+  text-align: center;
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #60a5fa;
+}
+
+/* ---------- HERO SECTION ---------- */
 .hero {
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("profile02.jpg") center/cover no-repeat;
-  color: white;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  margin: 10px 0 25px;
-}
-
-.btn {
-  background: white;
-  color: #4f46e5;
-  padding: 12px 24px;
+/* ---------- BUTTONS (Glass Style) ---------- */
+.btn,
+.link-btn {
+  display: inline-block;
+  padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-}
+  margin-top: 20px;
 
-/* ---------- Sections ---------- */
-.section {
-  padding: 70px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-.section.dark {
-  background: #111827;
   color: white;
+
+  transition: all 0.3s ease;
 }
 
-.section.light {
-  background: #f8fafc;
-  color: #111827;
+.btn:hover,
+.link-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.section.light h2 {
-  color: #4f46e5;
-}
-
-/* ---------- Skills ---------- */
+/* ---------- SKILLS ---------- */
 .skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .skills span {
-  background: #4f46e5;
-  color: white;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 20px;
+  background: rgba(255,255,255,0.15);
   font-size: 0.9rem;
 }
 
-/* ---------- Gold Skills Heading ---------- */
-.gold-heading {
-  font-size: 2.4rem;
+/* ---------- PROJECT GRID ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ---------- PROJECT CARD ---------- */
+.card {
+  padding: 35px 25px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+}
+
+/* ---------- PROJECT TITLE ---------- */
+.project-title {
+  font-size: 1.4rem;
   font-weight: 700;
-  background: linear-gradient(
-    90deg,
-    #b8860b,
-    #ffd700,
-    #fff3a0,
-    #ffd700,
-    #b8860b
-  );
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: goldShine 3s linear infinite;
+  margin-bottom: 15px;
+  color: #93c5fd;
 }
 
-@keyframes goldShine {
-  0% { background-position: 0% center; }
-  100% { background-position: 300% center; }
+/* ---------- PROJECT DESCRIPTION ---------- */
+.project-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 25px;
 }
 
+/* ---------- PROJECT TECH ---------- */
+.project-tech {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- LINKS SECTION ---------- */
+.links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 80px;
+  text-align: center;
+  color: #94a3b8;
+  padding-bottom: 40px;
+}
 /* ---------- Projects ---------- */
 .projects {
   display: grid;
