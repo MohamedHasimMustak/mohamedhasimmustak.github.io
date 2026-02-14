@@ -1,4 +1,4 @@
-/* ---------- GLOBAL RESET ---------- */
+/* ================= GLOBAL RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,39 +6,74 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* ---------- FIXED BACKGROUND ---------- */
+/* ================= FIXED BACKGROUND ================= */
 body {
   background: url("background.jpg") center/cover fixed no-repeat;
   color: #e5e7eb;
   line-height: 1.6;
 }
 
-/* ---------- MAIN WRAPPER ---------- */
+/* ================= SECTION WRAPPER ================= */
 .section {
   max-width: 1000px;
-  margin: 80px auto;
+  margin: 100px auto;
   padding: 40px 20px;
   text-align: center;
 }
 
-/* ---------- SECTION HEADINGS ---------- */
+/* ================= GOLD MAIN HEADINGS ================= */
 .section h2 {
-  display: inline-block;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 50px;
 
-  padding: 8px 20px;
-  margin-bottom: 40px;
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #ffd700,
+    #fff3a0,
+    #ffd700,
+    #b8860b
+  );
+  background-size: 300% auto;
 
-  border-radius: 30px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-  background: rgba(96, 165, 250, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(96, 165, 250, 0.4);
+  animation: goldShine 4s linear infinite;
 }
 
-/* ---------- HERO SECTION ---------- */
+@keyframes goldShine {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* ================= SILVER SUB HEADINGS ================= */
+.sub-heading {
+  font-size: 1.4rem;
+  margin-top: 40px;
+
+  background: linear-gradient(
+    90deg,
+    #9ca3af,
+    #e5e7eb,
+    #ffffff,
+    #e5e7eb,
+    #9ca3af
+  );
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: silverShine 5s linear infinite;
+}
+
+@keyframes silverShine {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* ================= HERO ================= */
 .hero {
   min-height: 90vh;
   display: flex;
@@ -47,7 +82,7 @@ body {
   align-items: center;
 }
 
-/* ---------- BUTTONS (Glass Style) ---------- */
+/* ================= GLASS BUTTONS ================= */
 .btn,
 .link-btn {
   display: inline-block;
@@ -58,24 +93,23 @@ body {
   margin-top: 20px;
 
   background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   color: white;
-
   transition: all 0.3s ease;
 }
 
 .btn:hover,
 .link-btn:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   background: rgba(255,255,255,0.2);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
-/* ---------- SKILLS ---------- */
+/* ================= SKILLS ================= */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -90,22 +124,82 @@ body {
   font-size: 0.9rem;
 }
 
-/* ---------- PROJECT GRID ---------- */
+/* ================= PROJECT GRID ================= */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-/* ---------- PROJECT CARD ---------- */
+/* ================= PROJECT CARD ================= */
 .card {
-  padding: 35px 25px;
-  border-radius: 18px;
+  padding: 40px 30px;
+  border-radius: 22px;
 
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* ================= PROJECT TITLE ================= */
+.project-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #93c5fd;
+  margin-bottom: 18px;
+}
+
+/* ================= PROJECT DESCRIPTION ================= */
+.project-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+/* ================= PROJECT TECH ================= */
+.project-tech {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.project-tech::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  margin: 0 auto 16px;
+  border-radius: 2px;
+}
+
+/* ================= LINKS ================= */
+.links-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 100px;
+  text-align: center;
+  color: #94a3b8;
+  padding-bottom: 40px;
+}  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ---------- PROJECT TITLE ---------- */
@@ -241,9 +335,23 @@ footer {
 
 /* ---------- Sub Headings ---------- */
 .sub-heading {
-  margin-top: 40px;
   font-size: 1.4rem;
-  color: #4f46e5;
+  margin-top: 40px;
+
+  background: linear-gradient(
+    90deg,
+    #9ca3af,
+    #e5e7eb,
+    #ffffff,
+    #e5e7eb,
+    #9ca3af
+  );
+
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: silverShine 5s linear infinite;
 }
 
 /* ---------- Footer ---------- */
@@ -252,7 +360,9 @@ footer {
   color: #cbd5f5;
   text-align: center;
   padding: 30px 10px;
-}.links-section h2 {
+}
+
+.links-section h2 {
   font-size: 2rem;
   margin-bottom: 25px;
   color: #1e1b4b;
@@ -266,13 +376,21 @@ footer {
 }
 
 .link-btn {
-  background: #4f46e5;
-  color: white;
-  padding: 14px 26px;
+  padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+
+  box-shadow: 0 8px 25px rgba(79,70,229,0.4);
+  transition: all 0.3s ease;
+}
+
+.link-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(79,70,229,0.6);
 }
 
 .link-btn:hover {
@@ -312,6 +430,10 @@ footer {
   }
 }
 
+@keyframes silverShine {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
 .project-title {
   font-size: 1.4rem;
   font-weight: 700;
